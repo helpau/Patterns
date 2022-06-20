@@ -7,6 +7,7 @@ namespace Patterns
         static void Main(string[] args)
         {
             Console.WriteLine("Hello Strategy!");
+            //Git extensions test
         }
     }
 }
