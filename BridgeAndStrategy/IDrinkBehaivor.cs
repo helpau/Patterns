@@ -8,4 +8,28 @@ namespace Patterns.BridgeAndStrategy
     {
         void Drink();
     }
+
+    public class DrinkRom : IDrinkBehavior
+    {
+        public void Drink()
+        {
+            Console.WriteLine("Пьём ром");
+        }
+    }
+
+    public class DrinkJean : IDrinkBehavior
+    {
+        public void Drink()
+        {
+            Console.WriteLine("Пьём джинн");
+        }
+    }
+
+    public class NoDrink : IDrinkBehavior
+    {
+        public void Drink()
+        {
+            Console.WriteLine("Не пьём");
+        }
+    }
 }

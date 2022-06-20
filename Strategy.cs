@@ -9,6 +9,9 @@ namespace Patterns
         {
             Pirate Max = new Yunga();
             Max.Smoke();
+            Max.Drink();
+            Max = new Botson();
+            Max.Smoke();
         }
     }
 }

@@ -9,11 +9,21 @@ namespace Patterns.BridgeAndStrategy
         protected int health = 100;
 
         protected ISmokeBehavior smokeBehavior;
-
+        protected IDrinkBehavior drinkBehavior;
+        protected IShootBehavior shootBehavior;
         public void Smoke()
         {
             smokeBehavior.Smoke();
         }
+        public void Drink()
+        {
+            drinkBehavior.Drink();
+        }
+        public void Shoot()
+        {
+            shootBehavior.Shoot();
+        }
+        
 
     }
 
@@ -22,18 +32,26 @@ namespace Patterns.BridgeAndStrategy
         public Yunga()
         {
             smokeBehavior = new NoSmoke();
+            drinkBehavior = new DrinkRom();
+            
         }
     }
 
     class Botson : Pirate
     {
-
+        public Botson()
+        {
+            smokeBehavior = new SmokeTabacco();
+        }
     }
 
-    class Captain : Pirate 
-    { 
-    
+    class Captain : Pirate
+    {
+        public Captain()
+        {
+            smokeBehavior = new SmokeSnuff();
+        }
     }
-    
+
 }
 
